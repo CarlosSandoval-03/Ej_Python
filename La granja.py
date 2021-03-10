@@ -4,7 +4,7 @@ escorpiones = int(input("Numero de escorpiones: "))
 corralN = int(input("Ingrese el alto del corral: "))
 corralM = int(input("Ingrese el ancho del corral: "))
 
-# Caso 1
+# Ejercicio 1
 if corralM <= 0 or corralN <= 0:
     print("Error: El area debe ser positiva")
 else:
@@ -15,7 +15,7 @@ else:
         print("En la granja se producen:", leche, "litros de leche")
     else:
         print("No es posible producir leche sin vacas")
-# Caso 2
+# Ejercicio 2
 if aves >= 3:
     gallinas = aves / 3
     if not gallinas <= 2:
@@ -28,7 +28,7 @@ if aves >= 3:
         print("No tenemos gallinas de coma flotante O-O")
 else:
     print("No tenemos aves negativas")
-# Caso 3
+# Ejercicio 3
 if not escorpiones <= 3:
     escorpionesVenta = escorpiones / 3
     escorpionesVenta = int(escorpionesVenta)
@@ -39,7 +39,7 @@ if not escorpiones <= 3:
     print("Podemos vender:", escorpionesKilos, "kilos, de escorpiones a China")
 else:
     print("No tenemos escorpiones suficientes :(")
-# Caso 4
+# Ejercicio 4
 if not corralM <= 0 or corralN <= 0:
     corralPerimetro = (corralM * 2) + (corralN * 2)
     madera = int(input("Ingrese costo de la madera (m): "))
