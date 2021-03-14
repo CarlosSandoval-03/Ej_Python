@@ -59,7 +59,6 @@ def ejDoce(a,b,x):
     resultado += b
     print("La derivada en el punto",x,"es",resultado)
 #13. Dado un natural, determinar si es un número de Fibonacci o no.
-# python program to check if x is a perfect square 
 def ejTrece(num):
     def raizCuadrada(var):
         x = 1.0
