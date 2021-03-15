@@ -1,9 +1,3 @@
-#Raiz cuadrada
-def raizCuadrada(var):
-            x = 1.0
-            for k in range(1, 10):
-                x = (x + var/x)/2
-            return x
 #14. Dadas la pendiente y el punto de corte de dos rectas, determinar si son paralelas, perpendiculares o ninguna de las anteriores.
 def ejCatorce(m1,m2):
     operacion = m1 * m2
@@ -25,6 +19,11 @@ def ejDiezSeis(r):
     print("Aproximadamente:","{:.2f}".format(z))
 #17. Dado el radio de un cı́rculo, calcular el área y perı́metro del cuadrado, pentágono y hexágono adentro (inscrito en un cı́rculo) y afuera (inscribiendo al cı́rculo).
 def ejDiezSiete(r = float(input("Ingrese el radio: "))):
+    def raizCuadrada(var):
+        x = 1.0
+        for k in range(1, 10):
+            x = (x + var/x)/2
+        return x
     print("1. Area y Perimetro del Cuadrado (Exteriror)\n2. Area y Perimetro del Cuadrado (Interiror)")
     print("3. Area y Perimetro del Pentagono (Exteriror)\n4. Area y Perimetro del Pentagono (Interiror)")
     print("5. Area y Perimetro del Hexagono (Exteriror)\n6. Area y Perimetro del Hexagono (Interiror)\n")
