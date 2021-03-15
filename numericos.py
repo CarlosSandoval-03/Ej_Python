@@ -87,4 +87,4 @@ def ejTrece(num):
 #ejDiez(a = int(input("Ingrese coeficiente A: ")),b = int(input("Ingrese coeficiente B: ")),c = int(input("Ingrese coeficiente C: ")),x = int(input("Ingrese el valor dado a X:")))
 #ejOnce(a = int(input("Ingrese coeficiente A del polinomio: ")), b = int(input("Ingrese coeficiente B del polinomio: ")), x = int(input("Ingrese valor dado a X: ")))
 #ejDoce(a = int(input("Ingrese el coeficiente A: ")), b = int(input("Ingrese el coeficiente B: ")), x = int(input("Ingrese valor dado a X: ")))
-ejTrece(num = int(input("Ingrese el valor a comprobar: ")))
+#ejTrece(num = int(input("Ingrese el valor a comprobar: ")))
