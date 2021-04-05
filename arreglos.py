@@ -64,10 +64,30 @@ def ejVeinteSiete(arreglo):
     print("El valor máximo es:",x)
 #28. Desarrollar un algoritmo que calcule el producto directo de dos arreglos de enteros (reales) de igual tamaño. Sean v = (v 1 , v 2 , . . . , v n ) y 
 # w = (w 1 , w 2 , . . . , w n ) dos arreglos, el producto directo de v y w (notado v ∗ w) es el vector: (v 1 ∗ w 1 , v 2 ∗ w 2 , . . . , v n ∗ w n ).
-
+def ejVeinteOcho(arreglo1,arreglo2):
+    n1 = len(arreglo1)
+    n2 = len(arreglo2)
+    if n1 == n2:
+        productoDirecto = []
+        for i in range(n1):
+            resultado = arreglo1[i] * arreglo2[i]
+            productoDirecto.append(resultado)
+        print("El producto directo de los dos arreglos es:",productoDirecto)
+    else:
+        print("Los arreglos no son del mismo tamaño")
 #29. Desarrollar un algoritmo que determine la mediana de un arreglo de enteros (reales). La mediana es el número que queda en la mitad del arreglo después de ser
 #ordenado.
-
+def ejVeinteNueve(arreglo):
+    n = len(arreglo)
+    arreglo.sort() # Organiza en orden de menor a mayor
+    if n%2 == 0:
+        n /= 2
+        total = (arreglo[int(n-1)] + arreglo[int(n)]) / 2
+        print("La mediana del arreglo:",arreglo,"es:",total)
+    elif n%2 != 0:
+        n /= 2
+        n = round(n)
+        print("La mediana del arreglo:",arreglo,"es:",arreglo[n])
 #30. Hacer un algoritmo que deje al final de un arreglo de números todos los ceros que aparezcan en dicho arreglo.
 #Ejemplo.
 #vector original: (1, 6, 0, 7, −3, 8, 0, −2, 11)
@@ -75,7 +95,8 @@ def ejVeinteSiete(arreglo):
 #Ejemplo.
 #vector original: (0, 11, 36, 10, 0, 17, −23, 81, 0, 0, 12, 11, 0)
 #vector salida: (11, 36, 10, 17, −23, 81, 12, 11, 0, 0, 0, 0, 0)
-
+def ejTreinta(arreglo):
+    n = len(arreglo)
 ### Pruebas Funciones ###
 #ejVeinteDos(n = input("Ingrese el numero natural a evaluar: "))
 #ejVeinteTres(x = [3,5,4,8,9,10])
@@ -83,3 +104,6 @@ def ejVeinteSiete(arreglo):
 #ejVeinteCinco(arreglo1 = [2,2,1], arreglo2 = [3,3,2])
 #ejVeinteSeis(arreglo = [-25,0,23,-1,6,7,8,9,10,-489])
 #ejVeinteSiete(arreglo = [-25,0,23,-1,6,7,8,9,10,-489,1000])
+#ejVeinteOcho(arreglo1 = [2,2,1,5], arreglo2 = [3,3,2,10])
+#ejVeinteNueve(arreglo = [2,2,3,5,5,5,6,6,8,9])
+ejTreinta(arreglo = [1, 6, 0, 7, -3, 8, 0, -2, 11])
