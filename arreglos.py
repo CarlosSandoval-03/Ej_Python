@@ -29,13 +29,13 @@ def suma(arreglo):
             suma = suma + i
     return suma
 def ejVeinteTres(x):
-    print(suma(x))
+    print("La suma de los elementos del arreglo es:",suma(x))
 #24. Desarrollar un algoritmo que calcule el promedio de un arreglo de enteros (reales).
 def ejVeinteCuatro(arreglo):
     n = len(arreglo)
     total = suma(arreglo)
     total /= n
-    print(total)
+    print("El promedio del arreglo es:",total)
 #25. Desarrollar un algoritmo que calcule el producto punto de dos arreglos de números enteros (reales) de igual tamaño. Sean v = (v 1 , v 2 , . . . , v n ) y
 #w = (w 1 , w 2 , . . . , w n ) dos arreglos, el producto de v y w (notado v ⋅ w) es el número: v 1 ∗ w 1 + v 2 ∗ w 2 + ⋯ + v n ∗ w n .
 def ejVeinteCinco(arreglo1,arreglo2):
@@ -45,14 +45,23 @@ def ejVeinteCinco(arreglo1,arreglo2):
         producto = 0
         for i in range(n1):
             producto = producto + (arreglo1[i] * arreglo2[i])
-        print(producto)
+        print("El producto de los dos arreglos es:",producto)
     else:
         print("Los arreglos no son del mismo tamaño")
 #26. Desarrollar un algoritmo que calcule el mı́nimo de un arreglo de números enteros (reales).
 def ejVeinteSeis(arreglo):
-    a = None
+    x = arreglo[0]
+    for i in arreglo:
+        if i <= x:
+            x = i
+    print("El valor minimo es:",x)
 # 27. Desarrollar un algoritmo que calcule el máximo de un arreglo de números enteros (reales).
-
+def ejVeinteSiete(arreglo):
+    x = arreglo[0]
+    for i in arreglo:
+        if i >= x:
+            x = i
+    print("El valor máximo es:",x)
 #28. Desarrollar un algoritmo que calcule el producto directo de dos arreglos de enteros (reales) de igual tamaño. Sean v = (v 1 , v 2 , . . . , v n ) y 
 # w = (w 1 , w 2 , . . . , w n ) dos arreglos, el producto directo de v y w (notado v ∗ w) es el vector: (v 1 ∗ w 1 , v 2 ∗ w 2 , . . . , v n ∗ w n ).
 
@@ -72,4 +81,5 @@ def ejVeinteSeis(arreglo):
 #ejVeinteTres(x = [3,5,4,8,9,10])
 #ejVeinteCuatro(arreglo = [3,5,4,8,9,10])
 #ejVeinteCinco(arreglo1 = [2,2,1], arreglo2 = [3,3,2])
-ejVeinteSeis(arreglo = [1,2,3,4,5,6,7,8,9,10])
+#ejVeinteSeis(arreglo = [-25,0,23,-1,6,7,8,9,10,-489])
+#ejVeinteSiete(arreglo = [-25,0,23,-1,6,7,8,9,10,-489,1000])
