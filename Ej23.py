@@ -14,7 +14,9 @@ def meterNumeros(arreglo):
     if a != "#":
         a = int(a)
         arreglo.append(a)
-        meterNumeros(arreglo)  
+        meterNumeros(arreglo)
+    else:
+        return arreglo
 
 def main():
     x = []
