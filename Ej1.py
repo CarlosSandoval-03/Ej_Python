@@ -10,7 +10,7 @@ def ejUno(vacas,corralN,corralM):
         corralArea = corralN * corralM
         if not vacas <= 0:
             producir = int(input("¿Cuantos litros de leche la vaca produce por metro cuadrado?: "))
-            leche = vacas * (producir * corralArea)
+            leche = (corralArea / producir) * vacas
             print("En la granja se producen:", leche, "litros de leche")
         else:
             print("No es posible producir leche sin vacas")
