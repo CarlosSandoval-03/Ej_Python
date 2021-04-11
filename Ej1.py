@@ -9,16 +9,16 @@ def ejUno(vacas,corralN,corralM):
     else:
         corralArea = corralN * corralM
         if not vacas <= 0:
-            producir = int(input("¿Cuantos litros de leche la vaca produce por metro cuadrado?: "))
-            leche = (corralArea / producir) * vacas
+            producir = float(input("¿Cuantos litros de leche la vaca produce por metro cuadrado?: "))
+            leche = (corralArea / producir) * float(vacas)
             print("En la granja se producen:", leche, "litros de leche")
         else:
             print("No es posible producir leche sin vacas")
 
 def main():
     a = int(input("Numero de vacas: "))
-    b = int(input("Ingrese el alto del corral: "))
-    c = int(input("Ingrese el ancho del corral: "))
+    b = float(input("Ingrese el alto del corral: "))
+    c = float(input("Ingrese el ancho del corral: "))
     ejUno(a,b,c)
 
 if __name__ == "__main__":
