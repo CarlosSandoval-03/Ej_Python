@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 #11. Dados los coeficientes de un polinomio de grado dos, calcular coeficiente lineal de la derivada.
 def ejOnce(a,b,x):
     resultado = (a * x) + b

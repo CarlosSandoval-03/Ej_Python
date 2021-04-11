@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 from Ej23 import meterNumeros
 #24. Desarrollar un algoritmo que calcule el promedio de un arreglo de enteros (reales).
 def suma(arreglo):

@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 #15. Dadas la pendiente y el punto de corte de dos rectas, determinar los puntos de intersección al origen.
 def ejQuince(m1,b1,m2,b2):
     operacion = (b2-b1) / (m1-m2)

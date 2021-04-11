@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 #16. Dado el radio de un cı́rculo, calcular el área del triángulo que circunscribe el circulo (triangulo afuera).
 def ejDiezSeis(r):
     x = 4.84 * r

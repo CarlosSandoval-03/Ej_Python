@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 #7. Determinar si un numero es primo.
 def ejSiete(numero, i=2):
     if i >= numero:

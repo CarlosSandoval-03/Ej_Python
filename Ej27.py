@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 from Ej23 import meterNumeros
 # 27. Desarrollar un algoritmo que calcule el máximo de un arreglo de números enteros (reales).
 def ejVeinteSiete(arreglo):
