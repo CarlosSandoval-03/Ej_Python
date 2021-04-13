@@ -8,8 +8,8 @@ def ejSeis(a, b):
         print("Es divisible")
 
 def main():
-    primerValor = int(input("Ingrese el valor de A:"))
-    segundoValor = int(input("Ingrese el valor de B:"))
+    primerValor = float(input("Ingrese el valor de A:"))
+    segundoValor = float(input("Ingrese el valor de B:"))
     ejSeis(primerValor,segundoValor)
 
 if __name__ == "__main__":
