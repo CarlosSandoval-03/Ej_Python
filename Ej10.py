@@ -6,10 +6,10 @@ def ejDiez(a,b,c,x):
     print("El valor dado es:",resultado)
     
 def main():
-    coefA = int(input("Ingrese coeficiente A: "))
-    coefB = int(input("Ingrese coeficiente B: "))
-    coefC = int(input("Ingrese coeficiente C: "))
-    valor = int(input("Ingrese el valor x: "))
+    coefA = float(input("Ingrese coeficiente A: "))
+    coefB = float(input("Ingrese coeficiente B: "))
+    coefC = float(input("Ingrese coeficiente C: "))
+    valor = float(input("Ingrese el valor x: "))
     ejDiez(coefA,coefB,coefC,valor)
 
 if __name__ == "__main__":
