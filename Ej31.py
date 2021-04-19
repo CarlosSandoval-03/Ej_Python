@@ -30,8 +30,10 @@ def validacion(arreglo):
 
 def binario(arreglo):
     total = 0
-    for posicion, numero in enumerate(arreglo):
-        total += numero * (2 ** posicion)
+    posicion = 0
+    for numero in arreglo:
+        total += numero * (2**posicion)
+        posicion += 1
     return total
     
 def main():
