@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
 import Ej23
 #24. Desarrollar un algoritmo que calcule el promedio de un arreglo de enteros (reales).
 def promedioArreglo(arreglo):

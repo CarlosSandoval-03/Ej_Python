@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
 #9. Determinar si un número es múltiplo de la suma de otros dos números.
 def ejNueve(a, b, c):
     numero = a + b

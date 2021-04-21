@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
 #13. Dado un natural, determinar si es un número de Fibonacci o no.
 def raizCuadrada(var):
     x = 1.0

@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
 #Si 1/3 de las aves que hay en la granja son gallinas, y la mitad de las gallinas ponen 1 huevo cada 3 dı́as y la otra mitad 1 huevo cada 5 dı́as, ¿en un mes cuántos
 #huevos producen? (1 mes ≡ 30 dı́as).
 def ejDos(aves):

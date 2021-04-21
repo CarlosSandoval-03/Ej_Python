@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
 #5. Función potencia de un entero elevado a un entero.
 def ejCinco(a, b):
     resultado = int(a) ** int(b)

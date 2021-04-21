@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
 #6. Una función que determine si un número es divisible por otro.
 def ejSeis(a, b):
     if a%b != 0:

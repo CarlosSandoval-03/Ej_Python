@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
 #30. Hacer un algoritmo que deje al final de un arreglo de números todos los ceros que aparezcan en dicho arreglo.
 #Ejemplo.
 #vector original: (1, 6, 0, 7, −3, 8, 0, −2, 11)

@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
 #8. Dados dos naturales, determinar si son primos relativos.
 def mcd(primerValor, segundoValor):
     if primerValor > segundoValor:

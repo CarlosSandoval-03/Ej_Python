@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
 #23. Desarrollar un algoritmo que calcule la suma de los elementos de un arreglo de números enteros (reales).
 def meterNumeros(arreglo):
     def operacion(arreglo):

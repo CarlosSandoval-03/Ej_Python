@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
 from Ej23 import meterNumeros
 #26. Desarrollar un algoritmo que calcule el mı́nimo de un arreglo de números enteros (reales).
 def ejVeinteSeis(arreglo):

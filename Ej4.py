@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
 #Al granjero se le daño el corral y no sabe si volver a cercar el corral con madera, alambre de púas o poner reja de metal. Si va a cercar con madera debe poner 4
 #hileras de tablas, con varilla 8 hileras y con alambre solo 5 hileras, él quiere saber que es lo menos costoso para cercar si sabe que el alambre de púas vale P
 #por metro, las tablas a Q por metro y las varillas S por metro. Dado el tamaño del corral y los precios de los elementos, ¿cuál cerramiento es el más económico?.
