@@ -7,12 +7,12 @@ def ejVeinteSiete(arreglo):
     for i in arreglo:
         if i >= x:
             x = i
-    return("El valor máximo es:",x)
+    return x
 
 def main():
     x = []
     meterNumeros(x)
-    print(ejVeinteSiete(x))
+    print("El valor máximo es:",ejVeinteSiete(x))
     
 if __name__ == "__main__":
     main()

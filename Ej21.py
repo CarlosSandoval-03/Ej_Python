@@ -15,30 +15,31 @@ def legos_2(n):
         return(legos_2(n-1) + legos_2(n-2)) + legos_2(n-3)
 
 def eleccion():
-    elec = int(input("Eliga el caso 1 o el caso 2 (sin ficha amarilla): "))
+    elec = int(input("Eliga el caso 1 o el caso 2 (con ficha amarilla): "))
     return elec
+
+def mensajes(mensaje,caso,x):
+    if mensaje:
+        print("La cantidad de formas en las que se pueden ubicar las fichas en el caso",caso,"es de",x,"formas posibles")
+    else:
+        print("Caso solicidato invalido")
 
 def ejVeinteUno(num):
     e = eleccion()
-    x = None
     if e == 1:
         x = legos(num)
         caso = "1"
-        mensaje = True
+        mensajes(True,caso,x)
     elif e == 2:
         x = legos_2(num)
         caso = "2"
-        mensaje = True
+        mensajes(True,caso,x)
     else:
-        mensaje = False
-    if mensaje:
-        return "La cantidad de formas en las que se pueden ubicar las fichas en el caso",caso,"es de",x,"formas posibles"
-    else:
-        return "Caso solicidato invalido"
+        mensajes(False,"",0)
             
 def main():
     n = int(input("Ingrese el valor de la 'n': "))
-    print(ejVeinteUno(n))
+    ejVeinteUno(n)
     
 if __name__ == "__main__":
     main()

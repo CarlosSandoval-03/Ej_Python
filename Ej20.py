@@ -6,30 +6,31 @@ def eleccion():
     elec = int(input("Elija el tipo de interes:\n1. Simple\n2. Compuesto\nEleccion: "))
     return elec
 
+def simple(a,b):
+    return ((7*(b/100)) * a)
+
+def compuesto(a,b):
+    return (a * (1 + (b / 100))**7)
+
 def ejVeinte(k,i):
-    tipo = None
     e = eleccion()
     if e == 1:
-        total = (7*(i/100)) * k
-        peticion = "Simple"
-        tipo = True
+        mensajes(True,"Simple",simple(k,i))
     elif e == 2:
-        i = i / 100
-        total = k * (1 + i)**7
-        peticion = "Compuesto"
-        tipo = True
+        mensajes(True,"Compuesto",compuesto(k,i))
     else:
-        tipo = False
+        mensajes(False,"",None)
         
+def mensajes(tipo,peticion,total):
     if tipo:
-        return "El total de pagar a la semana con un interes",peticion,"es $","{:.2f}".format(total)
+        print("El total de pagar a la semana con un interes",peticion,"es $","{:.2f}".format(total))
     else:
-        return "Peticion solicitada invalida"
+        print("Peticion solicitada invalida")
 
 def main():
     k = float(input("Ingrese el valor prestado: "))
     i = float(input("Ingrese el interes diario: "))
-    print(ejVeinte(k,i))
+    ejVeinte(k,i)
 
 if __name__ == "__main__":
     main()

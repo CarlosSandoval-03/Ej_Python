@@ -7,12 +7,12 @@ def ejVeinteSeis(arreglo):
     for i in arreglo:
         if i <= x:
             x = i
-    return "El valor minimo es:",x
+    return x
 
 def main():
     x = []
     meterNumeros(x)
-    print(ejVeinteSeis(x))
+    print("El valor minimo es:",ejVeinteSeis(x))
     
 if __name__ == "__main__":
     main()

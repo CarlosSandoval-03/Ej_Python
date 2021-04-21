@@ -1,27 +1,17 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-from Ej23 import meterNumeros
+import Ej23
 #24. Desarrollar un algoritmo que calcule el promedio de un arreglo de enteros (reales).
-def suma(arreglo):
+def promedioArreglo(arreglo):
     n = len(arreglo)
-    if n == 1:
-        return arreglo
-    else:
-        suma = 0
-        for i in arreglo:
-            suma = suma + i
-    return suma
-
-def ejVeinteCuatro(arreglo):
-    n = len(arreglo)
-    total = suma(arreglo)
+    total = Ej23.sumaArreglo(arreglo)
     total /= n
-    return "El promedio del arreglo es:",total
+    return total
     
 def main():
     x = []
-    meterNumeros(x)
-    print(ejVeinteCuatro(x))
+    Ej23.meterNumeros(x)
+    print("El promedio del arreglo es:",promedioArreglo(x))
     
 if __name__ == "__main__":
     main()

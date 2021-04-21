@@ -8,7 +8,7 @@ def ejCinco(a, b):
 def main():
     primerValor = int(input("Ingrese el valor de A:"))
     segundoValor = int(input("Ingrese el valor de B:"))
-    print(ejCinco(primerValor,segundoValor))
+    print("El resultado es:",ejCinco(primerValor,segundoValor))
     
 if __name__ == "__main__":
     main()
