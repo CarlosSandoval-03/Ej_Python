@@ -1,62 +1,23 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-from Ej13 import raizCuadrada
+import Ej16
 #17. Dado el radio de un cı́rculo, calcular el área y perı́metro del cuadrado, pentágono y hexágono adentro (inscrito en un cı́rculo) y afuera (inscribiendo al cı́rculo).
-def eleccion():
-    print("1. Area y Perimetro del Cuadrado (Exteriror)\n2. Area y Perimetro del Cuadrado (Interiror)")
-    print("3. Area y Perimetro del Pentagono (Exteriror)\n4. Area y Perimetro del Pentagono (Interiror)")
-    print("5. Area y Perimetro del Hexagono (Exteriror)\n6. Area y Perimetro del Hexagono (Interiror)\n")
-    elec = int(input("Ingrese problema solicitado: "))
-    return elec
-
-def ejDiezSiete(r):
-    e = eleccion()
-    enunciado = None
-    if e == 1:
-        #https://www.youtube.com/watch?v=TTx5KvUQ4QI
-        area = (2*r) ** 2
-        perimetro = 8 * r
-        problema = "Cuadrado (Exterior)"
-        enunciado = True
-    elif e == 2:
-        area = 2 * r
-        perimetro =  4 * raizCuadrada(2*r)
-        problema = "Cuadrado (Interno)"
-        enunciado = True
-    elif e == 3:
-        # 0.5878 = cos(3pi / 10)
-        # 0.8090 = cos(pi / 5)
-        area = ((10 * r * 0.5878/0.8090) * r) / 2
-        perimetro = (10 * r * 0.5878) / 0.8090
-        problema = "Pentagono (Exterior)"
-        enunciado = True
-    elif e == 4:
-        # 0.9510 = 
-        area = (((5 * r * 0.9510) / 0.8090) * (r * 0.8090)) / 2
-        perimetro = (5 * r * 0.9510) / 0.890
-        problema = "Pentagono (Interior)"
-        enunciado = True
-    elif e == 5:
-        # 0.866 = cos(pi / 6)
-        area = (((6 * r) / 0.866) * (r * 0.866)) / 2
-        perimetro = (6 * r) / 0.866
-        problema = "Hexagono (Exterior)"
-        enunciado = True
-    elif e == 6:
-        area = ((6 * r) * (r * 0.866)) / 2
-        perimetro = 6 * r
-        problema = "Hexagono (Interior)"
-        enunciado = True
-    else:
-        enunciado = False
-    if enunciado:
-        return "\nEl area es:","{:.2f}".format(area),"y el perimetro es:","{:.2f}".format(perimetro),"del",problema
-    else:
-        return "\nProblema seleccionado fuera de rango."
-        
+def impar(apotema, numeroLados):
+    return [Ej16.areaCirculoInscrito(apotema,numeroLados), Ej16.perimetroCirculoInscrito(apotema,numeroLados)]
+    
 def main():
+    comprobacion = int(input("El poligono esta inscrito [0] o circunscribe [1] la circunferencia: "))
     radio = float(input("Ingrese el radio: "))
-    print(ejDiezSiete(radio))
-
+    figura = int(input("Numero de lados del poligono: "))
+    #Se comprueba si se puede usar funcion ya definida en el Ej16
+    if comprobacion == 1:
+        lista = (impar(radio,figura))
+        print("El area es:","{:.2f}".format(lista[0])," y el perimetro es:","{:.2f}".format(lista[1]))
+    elif comprobacion == 0:
+        a = None
+    else:
+        print("Caso invalido, vuelva a intentar")
+        main()
+        
 if __name__ == "__main__":
     main()
