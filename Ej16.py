@@ -21,8 +21,7 @@ def perimetroCirculoInscrito(apotema,numeroLadosPoligono):
 
 def main():
     radio = float(input("Ingrese el radio del circulo: "))
-    poligono = 3
-    print("El area del triangulo es:",areaCirculoInscrito(radio,poligono))
+    print("El area del triangulo es:",areaCirculoInscrito(radio,3))
     
 if __name__ == "__main__":
     main()
