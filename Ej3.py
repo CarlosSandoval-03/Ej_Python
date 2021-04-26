@@ -2,7 +2,7 @@
 #y grandes (con un peso de 50 gramos), ¿cuántos kilos de escorpiones se pueden vender sin que decrezca la población a menos de 2/3?.
 def ejTres(escorpiones):
     if not escorpiones <= 3:
-        escorpionesVenta = escorpiones / 3
+        escorpionesVenta = escorpiones // 3
         escorpionesVenta = int(escorpionesVenta)
         #Teniendo en cuenta que se venderan los escorpiones que representen mayor valor a la venta se consideran unicamente Grandes y Medianos
         escorpionesGrandes = escorpionesVenta * 50
