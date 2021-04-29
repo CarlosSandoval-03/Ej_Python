@@ -4,13 +4,17 @@ def ejVeinteDos(n):
     if n >= 0:
         numeros = list(range(2, n+1))
         i = 0
+        #Mientras el cuadrado del elemento i sea menor a n continue el ciclo
         while(numeros[i]*numeros[i] <= n):
             for num in numeros:
                 if num <= numeros[i]:
+                    #No evaluar numeros ya descubiertos
                     continue
                 elif num % numeros[i] == 0:
+                    #Si es divisible lo elimina
                     numeros.remove(num)
                 else:
+                    #Si no es divisible lo omite
                     pass
             i += 1
         return numeros
