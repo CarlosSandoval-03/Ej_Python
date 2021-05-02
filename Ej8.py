@@ -1,15 +1,15 @@
 #8. Dados dos naturales, determinar si son primos relativos.
-def mcd(primerValor, segundoValor):
+def mcdDosValores(primerValor, segundoValor):
     if primerValor > segundoValor:
         if primerValor%segundoValor == 0:
             return segundoValor
         else:
-            return mcd(segundoValor, primerValor%segundoValor)
+            return mcdDosValores(segundoValor, primerValor%segundoValor)
     else:
-        return mcd(segundoValor,primerValor)
+        return mcdDosValores(segundoValor,primerValor)
         
 def ejOcho(a, b):
-    if mcd(a,b) == 1:
+    if mcdDosValores(a,b) == 1:
         return "Son primos relativos"
     else:
         return "No son primos relativos" 
