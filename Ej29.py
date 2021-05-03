@@ -8,15 +8,6 @@ def ordenarMenorMayor(arreglo):
         x = arreglo[pos]
         arreglo[pos] = arreglo[pos + 1]
         arreglo[pos + 1] = x
-  return 
-  
-def ordenarMayorMenor(arreglo):
-  for vuelta in range(1,len(arreglo)):
-    for pos in range(len(arreglo) - vuelta):
-      if arreglo[pos] < arreglo[pos + 1]:
-        x = arreglo[pos]
-        arreglo[pos] = arreglo[pos + 1]
-        arreglo[pos + 1] = x
   return arreglo
 
 def ejVeinteNueve(arreglo):
@@ -32,10 +23,10 @@ def ejVeinteNueve(arreglo):
         return arreglo[n]
 
 def main():
-    x = []
-    meterNumeros(x)
-    #print("La mediana del arreglo es:",ejVeinteNueve(x))
-    print(ordenarMenorMayor(x))
+  x = []
+  meterNumeros(x)
+  print("La mediana del arreglo es:",ejVeinteNueve(x))
+  print(ordenarMenorMayor(x))
     
 if __name__ == "__main__":
     main()
