@@ -13,8 +13,7 @@ def legos_2(n):
         return(legos_2(n-1) + legos_2(n-2)) + legos_2(n-3)
 
 def eleccion():
-    elec = int(input("Eliga el caso 1 o el caso 2 (con ficha amarilla): "))
-    return elec
+    return int(input("Eliga el caso 1 o el caso 2 (con ficha amarilla): "))
 
 def mensajes(mensaje,caso,x):
     if mensaje:
