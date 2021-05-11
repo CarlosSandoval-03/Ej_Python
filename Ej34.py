@@ -54,15 +54,14 @@ def simplificarEnPrimos(arreglo) -> list:
 
 def mcm(arreglo):
     diccionario = simplificarEnPrimos(arreglo)
-    if diccionario[0] in diccionario[1]:
-        print("a")
-    else:
-        print("b")
-    return diccionario
+    i = 0
+    x = diccionario[i]
+    y = diccionario[i+1]
+    return x, y, diccionario
 
 
 def main():
-    print(mcm([10, 20]))
+    print(mcm([10, 20, 30]))
 
 
 if __name__ == "__main__":

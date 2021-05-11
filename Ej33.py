@@ -5,8 +5,6 @@ from Ej27 import maximoArreglo  # Mayor Numero
 # Ejemplo.
 #Arreglo: (12,20,14,124,72,2458)
 # MCD del arreglo: 2
-
-
 def mcd(arreglo) -> list:
     pass
 
