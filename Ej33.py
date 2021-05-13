@@ -7,9 +7,7 @@ from Ej8 import mcdDosValores
 
 
 def mcdArreglo(arreglo):
-    num1 = arreglo[0]
-    num2 = arreglo[1]
-    mcd = mcdDosValores(num1, num2)
+    mcd = mcdDosValores(arreglo[0], arreglo[1])
     for i in range(2, len(arreglo)):
         mcd = mcdDosValores(mcd, arreglo[i])
     return mcd
