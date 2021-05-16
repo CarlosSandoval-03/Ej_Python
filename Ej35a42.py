@@ -123,7 +123,7 @@ def menuPrincipal(Resultado=None, mensaje="", mem=[]):
         arreglo1 = mem
         print("!---------------------------------------------------- Bienvenido a Los Conjuntos Como Arreglos ----------------------------------------------------!\nEl primer Arreglo es:", arreglo1)
         borradoCache = str(input(
-            "Si desea eliminar este valor por favor digite ':wq' y el programa olvidara este primer arreglo: "))
+            "Si desea eliminar este valor por favor digite ':wq' y el programa olvidara este primer arreglo (En caso opuesto deje el campo vacio): "))
         if borradoCache == ":wq":
             return menuPrincipal(None)
     elif Resultado == None:
@@ -142,10 +142,10 @@ def menuPrincipal(Resultado=None, mensaje="", mem=[]):
             eleccionUsuario = 1
     except:
         limpiarConsola()
-        return ["ValorEntero", "! ERROR: VALORES INGRESADOS INVALIDOS, POR FAVOR INGRESE UN ENTERO !"]
+        return main("ValorEntero")
     listaValores = boleanosMenu(arreglo1, arreglo2, eleccionUsuario)
     if listaValores == "Finaliza":
-        return False
+        return main("Exit")
     else:
         operacion = listaValores[0]
         arregloFinal = ordenarMenorMayor(listaValores[1])
@@ -158,15 +158,14 @@ def menuPrincipal(Resultado=None, mensaje="", mem=[]):
             return [menuPrincipal(True, f"! SOLUCION: El resultado de la operacion '{operacion}' es: !\n Es '{arregloFinal}' que el arreglo 2 contiene al arreglo 1")]
 
 
-def main():
-    x = menuPrincipal()
-    if x[0] == True:
-        main()
-    elif x[0] == False:
+def main(salida=""):
+    if salida == "Exit":
         print("!---------------------------------------------------- Saliendo De Los Conjuntos Como Arreglos ----------------------------------------------------!")
-    elif x[0] == "ValorEntero":
+    elif salida == "ValorEntero":
         print("! ERROR: VALORES INGRESADOS INVALIDOS, POR FAVOR INGRESE UN ENTERO !")
         print("!---------------------------------------------------- Saliendo De Los Conjuntos Como Arreglos ----------------------------------------------------!")
+    else:
+        x = menuPrincipal()
 
 
 if __name__ == "__main__":
