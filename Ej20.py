@@ -1,6 +1,3 @@
-print("20. Si un amigo, no tan amigo, me presta K pesos a i pesos de interés diario, ¿cuánto le pagaré en una semana si el interés es simple?, ¿y cuánto si el interés es compuesto?.")
-
-
 def eleccion():
     elec = int(
         input("Elija el tipo de interes:\n1. Simple\n2. Compuesto\nEleccion: "))
@@ -34,6 +31,7 @@ def mensajes(tipo, peticion, total):
 
 
 def main():
+    print("20. Si un amigo, no tan amigo, me presta K pesos a i pesos de interés diario, ¿cuánto le pagaré en una semana si el interés es simple?, ¿y cuánto si el interés es compuesto?.")
     k = float(input("Ingrese el valor prestado: "))
     i = float(input("Ingrese el interes diario: "))
     ejVeinte(k, i)

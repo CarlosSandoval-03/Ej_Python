@@ -1,5 +1,4 @@
 from Ej30 import nuevoMeterNumeros
-print("25. Desarrollar un algoritmo que calcule el producto punto de dos arreglos de números enteros (reales) de igual tamaño")
 # . Sean v = (v 1 , v 2 , . . . , v n ) y w = (w 1 , w 2 , . . . , w n ) dos arreglos, el producto de v y w (notado v ⋅ w) es el número: v 1 ∗ w 1 + v 2 ∗ w 2 + ⋯ + v n ∗ w n .
 
 
@@ -16,6 +15,7 @@ def ejVeinteCinco(arreglo1, arreglo2):
 
 
 def main():
+    print("25. Desarrollar un algoritmo que calcule el producto punto de dos arreglos de números enteros (reales) de igual tamaño")
     x = nuevoMeterNumeros()
     y = nuevoMeterNumeros()
     if ejVeinteCinco == False:

@@ -1,5 +1,4 @@
 from Ej23 import meterNumeros
-print("26. Desarrollar un algoritmo que calcule el mı́nimo de un arreglo de números enteros (reales).")
 
 
 def minimoArreglo(arreglo):
@@ -11,6 +10,7 @@ def minimoArreglo(arreglo):
 
 
 def main():
+    print("26. Desarrollar un algoritmo que calcule el mı́nimo de un arreglo de números enteros (reales).")
     x = []
     meterNumeros(x)
     print("El valor minimo es:", minimoArreglo(x))

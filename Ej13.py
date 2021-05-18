@@ -1,6 +1,3 @@
-print("13. Dado un natural, determinar si es un número de Fibonacci o no.")
-
-
 def cuadradoPerfecto(x):
     y = int(x ** 0.5)
     return y*y == x
@@ -21,6 +18,7 @@ def ejTrece(numero):
 
 
 def main():
+    print("13. Dado un natural, determinar si es un número de Fibonacci o no.")
     numero = int(input("Ingrese el valor a comprobar: "))
     valor = ejTrece(numero)
     if valor[0] == True:

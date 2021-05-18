@@ -1,6 +1,3 @@
-print("14. Dadas la pendiente y el punto de corte de dos rectas, determinar si son paralelas, perpendiculares o ninguna de las anteriores.")
-
-
 def ejCatorce(m1, m2, puntoCorte):
     operacion = m1 * m2
     if m1 == m2 and puntoCorte == []:
@@ -12,6 +9,7 @@ def ejCatorce(m1, m2, puntoCorte):
 
 
 def main():
+    print("14. Dadas la pendiente y el punto de corte de dos rectas, determinar si son paralelas, perpendiculares o ninguna de las anteriores.")
     pendienteUno = int(input("Ingrese el valor de la pendiente A a evaluar: "))
     pendienteDos = int(input("Ingrese el valor de la pendiente B a evaluar: "))
     corte = list(input(

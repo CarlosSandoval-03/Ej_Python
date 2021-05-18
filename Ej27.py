@@ -1,5 +1,4 @@
 from Ej23 import meterNumeros
-print("27. Desarrollar un algoritmo que calcule el máximo de un arreglo de números enteros(reales).")
 
 
 def maximoArreglo(arreglo):
@@ -11,6 +10,7 @@ def maximoArreglo(arreglo):
 
 
 def main():
+    print("27. Desarrollar un algoritmo que calcule el máximo de un arreglo de números enteros(reales).")
     x = []
     meterNumeros(x)
     print("El valor máximo es:", maximoArreglo(x))

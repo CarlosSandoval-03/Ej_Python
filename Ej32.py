@@ -1,4 +1,3 @@
-print("32. Hacer un algoritmo que dado un número entero no negativo, cree un arreglo de unos y ceros que representa el número en binario al revés.")
 # Ejemplo.
 #Número: 106
 # Arreglo: (0, 1, 0, 1, 0, 1, 1) (representa el número 1101010)
@@ -33,6 +32,7 @@ def ejTreintaDos(datos):
 
 
 def main():
+    print("32. Hacer un algoritmo que dado un número entero no negativo, cree un arreglo de unos y ceros que representa el número en binario al revés.")
     a = int(input("Ingrese el valor natural a evaluar: "))
     print("La lista solicitada es:", ejTreintaDos(a))
 

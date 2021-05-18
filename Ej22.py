@@ -1,6 +1,3 @@
-print("22. Implementar la criba de Eratostenes para calcular los números primos en el rango 1 a n, donde n es un número natural dado por el usuario.")
-
-
 def criba(n):
     n = int(n)
     if n >= 0:
@@ -27,6 +24,7 @@ def criba(n):
 
 
 def main():
+    print("22. Implementar la criba de Eratostenes para calcular los números primos en el rango 1 a n, donde n es un número natural dado por el usuario.")
     n = input("Ingrese el numero natural a evaluar: ")
     print(criba(n))
 

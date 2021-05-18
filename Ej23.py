@@ -1,6 +1,3 @@
-print("23. Desarrollar un algoritmo que calcule la suma de los elementos de un arreglo de números enteros (reales).")
-
-
 def meterNumeros(arreglo):
     def operacion(arreglo):
         a = input("Ingrese numero a insertar en el arreglo: ")
@@ -36,6 +33,7 @@ def sumaArreglo(arreglo):
 
 
 def main():
+    print("23. Desarrollar un algoritmo que calcule la suma de los elementos de un arreglo de números enteros (reales).")
     x = []
     meterNumeros(x)
     print("La suma de los elementos del arreglo es:", sumaArreglo(x))

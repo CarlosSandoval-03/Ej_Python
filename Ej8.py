@@ -1,6 +1,3 @@
-print("8. Dados dos naturales, determinar si son primos relativos.")
-
-
 def mcdDosValores(primerValor, segundoValor):
     if primerValor > segundoValor:
         if primerValor % segundoValor == 0:
@@ -19,6 +16,7 @@ def ejOcho(a, b):
 
 
 def main():
+    print("8. Dados dos naturales, determinar si son primos relativos.")
     primerValor = int(input("Ingrese el valor de A: "))
     segundoValor = int(input("Ingrese el valor de B: "))
     print(ejOcho(primerValor, segundoValor))

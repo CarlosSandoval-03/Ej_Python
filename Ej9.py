@@ -1,6 +1,3 @@
-print("9. Determinar si un número es múltiplo de la suma de otros dos números.")
-
-
 def ejNueve(a, b, c):
     numero = a + b
     if numero > c and numero != 0:
@@ -31,6 +28,7 @@ def mensajes(args) -> tuple:
 
 
 def main():
+    print("9. Determinar si un número es múltiplo de la suma de otros dos números.")
     a = int(input("Ingrese el numero a sumar A: "))
     b = int(input("Ingrese el numero a sumar B: "))
     c = int(input("Ingrese la incognita (posible multiplo): "))

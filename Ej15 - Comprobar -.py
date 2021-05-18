@@ -1,11 +1,9 @@
-print("15. Dadas la pendiente y el punto de corte de dos rectas, determinar los puntos de intersección al origen.")
-
-
 def ejQuince(m1, b1, m2, b2):
     return (b2-b1) / (m1-m2)
 
 
 def main():
+    print("15. Dadas la pendiente y el punto de corte de dos rectas, determinar los puntos de intersección al origen.")
     penUno = int(input("Ingrese el valor de la pendiente A a evaluar: "))
     penDos = int(input("Ingrese el valor de la pendiente B a evaluar: "))
     cortUno = int(input("Ingrese el punto de corte (x): "))

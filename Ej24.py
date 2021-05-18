@@ -1,5 +1,4 @@
 import Ej23
-print("24. Desarrollar un algoritmo que calcule el promedio de un arreglo de enteros (reales).")
 
 
 def promedioArreglo(arreglo):
@@ -10,6 +9,7 @@ def promedioArreglo(arreglo):
 
 
 def main():
+    print("24. Desarrollar un algoritmo que calcule el promedio de un arreglo de enteros (reales).")
     x = []
     Ej23.meterNumeros(x)
     print("El promedio del arreglo es:", promedioArreglo(x))

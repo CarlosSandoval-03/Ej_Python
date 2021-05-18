@@ -1,6 +1,3 @@
-print("7. Determinar si un numero es primo.")
-
-
 def ejSiete(numero, i=2):
     if i >= numero and numero > 0:
         return True
@@ -22,6 +19,7 @@ def mensajes(*args):
 
 
 def main():
+    print("7. Determinar si un numero es primo.")
     a = int(input("Elija el numero: "))
     mensajes(ejSiete(a))
 

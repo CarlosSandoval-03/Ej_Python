@@ -1,11 +1,9 @@
-print("11. Dados los coeficientes de un polinomio de grado dos, calcular coeficiente lineal de la derivada.")
-
-
 def ejOnce(a, b, c, x):
     return -(2 * a * x)
 
 
 def main():
+    print("11. Dados los coeficientes de un polinomio de grado dos, calcular coeficiente lineal de la derivada.")
     coefA = float(input("Ingrese coeficiente A del polinomio: "))
     coefB = float(input("Ingrese coeficiente B del polinomio: "))
     coefC = float(input("Ingrese coeficiente C del polinomio: "))

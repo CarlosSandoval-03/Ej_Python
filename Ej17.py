@@ -1,6 +1,5 @@
 import math
 import Ej16
-print("17. Dado el radio de un cı́rculo, calcular el área y perı́metro del cuadrado, pentágono y hexágono adentro (inscrito en un cı́rculo) y afuera (inscribiendo al cı́rculo).")
 
 
 def areaPoligonoInscrito(radio, numeroLadosPoligono):
@@ -29,6 +28,7 @@ def par(radio, numeroLados):
 
 
 def main():
+    print("17. Dado el radio de un cı́rculo, calcular el área y perı́metro del cuadrado, pentágono y hexágono adentro (inscrito en un cı́rculo) y afuera (inscribiendo al cı́rculo).")
     comprobacion = int(
         input("El poligono esta inscrito [0] o circunscribe [1] la circunferencia: "))
     radio = float(input("Ingrese el radio: "))
