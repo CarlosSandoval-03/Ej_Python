@@ -1,4 +1,4 @@
-# 30. Hacer un algoritmo que deje al final de un arreglo de números todos los ceros que aparezcan en dicho arreglo.
+print("30. Hacer un algoritmo que deje al final de un arreglo de números todos los ceros que aparezcan en dicho arreglo.")
 # Ejemplo.
 # vector original: (1, 6, 0, 7, −3, 8, 0, −2, 11)
 # vector salida: (1, 6, 7, −3, 8, −2, 11, 0, 0)

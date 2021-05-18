@@ -1,6 +1,6 @@
 from Ej30 import nuevoMeterNumeros
 from Ej8 import mcdDosValores
-# Hacer un algoritmo que calcule el Maximo Comun Divisor (MCD) para un arreglo de enteros positivos.
+print("33. Hacer un algoritmo que calcule el Maximo Comun Divisor (MCD) para un arreglo de enteros positivos.")
 # Ejemplo.
 #Arreglo: (12,20,14,124,72,2458)
 # MCD del arreglo: 2

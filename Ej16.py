@@ -1,5 +1,5 @@
 import math
-#16. Dado el radio de un cı́rculo, calcular el área del triángulo que circunscribe el circulo (triangulo afuera).
+print("16. Dado el radio de un cı́rculo, calcular el área del triángulo que circunscribe el circulo (triangulo afuera).")
 def areaCirculoInscrito(apotema,numeroLadosPoligono):
     #Al triangulo estar circunscrito el radio de la circuferencia es equivalente a la apotema
     teta = 360 / (2 * numeroLadosPoligono)

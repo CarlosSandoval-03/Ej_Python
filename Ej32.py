@@ -1,10 +1,12 @@
-# 32. Hacer un algoritmo que dado un número entero no negativo, cree un arreglo de unos y ceros que representa el número en binario al revés.
+print("32. Hacer un algoritmo que dado un número entero no negativo, cree un arreglo de unos y ceros que representa el número en binario al revés.")
 # Ejemplo.
 #Número: 106
 # Arreglo: (0, 1, 0, 1, 0, 1, 1) (representa el número 1101010)
 # Ejemplo.
 #Número: 389
 # Arreglo: (1, 0, 0, 1, 0, 1, 1, 1, 1) (representa el número 111101001)
+
+
 def decimalBinario(decimal):
     binario = []
     while decimal // 2 >= 1:
