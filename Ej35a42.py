@@ -1,6 +1,15 @@
+# Programar el in
 import os
 from Ej30 import nuevoMeterNumeros
 from Ej29 import ordenarMenorMayor
+
+
+def inSimple(seeker, arreglo):
+    boolean = False
+    for elemento in arreglo:
+        if elemento == seeker:
+            boolean = True
+    return boolean
 
 
 def limpiarConsola():
@@ -13,7 +22,7 @@ def limpiarConsola():
 def verificionNoRepeticion(arreglo) -> list:
     eliminacionRepetidos = []
     for elemento in arreglo:
-        if not elemento in eliminacionRepetidos:
+        if not inSimple(elemento, eliminacionRepetidos):
             eliminacionRepetidos.append(elemento)
         else:
             continue
@@ -30,7 +39,7 @@ def unionArreglos(arreglo1, arreglo2) -> list:
 def interseccionArreglos(arreglo1, arreglo2):
     listaInterseccion = []
     for elemento in arreglo1:
-        if elemento in arreglo2:
+        if inSimple(elemento, arreglo2):
             listaInterseccion.append(elemento)
     if len(listaInterseccion) == 0:
         listaInterseccion.append("Conjunto Vacio")
@@ -44,7 +53,7 @@ def interseccionArreglos(arreglo1, arreglo2):
 def diferenciaArreglos(arreglo1, arreglo2):
     listaDiferencia = []
     for elemento in arreglo1:
-        if not elemento in arreglo2:
+        if not inSimple(elemento, arreglo2):
             listaDiferencia.append(elemento)
     if len(listaDiferencia) == 0:
         listaDiferencia.append("Conjunto Vacio")
@@ -57,10 +66,10 @@ def diferenciaArreglos(arreglo1, arreglo2):
 def difSimetricaArreglos(arreglo1, arreglo2):
     listaDiferenciaSim = []
     for elemento in arreglo1:
-        if not elemento in arreglo2:
+        if not inSimple(elemento, arreglo2):
             listaDiferenciaSim.append(elemento)
     for elemento in arreglo2:
-        if not elemento in arreglo1:
+        if not inSimple(elemento, arreglo1):
             listaDiferenciaSim.append(elemento)
     if len(listaDiferenciaSim) == 0:
         listaDiferenciaSim.append("Conjunto Vacio")
@@ -72,23 +81,29 @@ def difSimetricaArreglos(arreglo1, arreglo2):
 
 def perteneceArreglos(arreglo1, arreglo2, entero):
     a, b = False, False
-    if int(entero) in arreglo1:
+    if inSimple(int(entero), arreglo1):
         a = True
-    if int(entero) in arreglo2:
+    if inSimple(int(entero), arreglo2):
         b = True
     return a, b
 # 40. Contenido: Determina si el primer conjunto esta contenido en el segundo y lo imprime.
 
 
 def contenidoArreglos(arreglo1, arreglo2):
-    x = 0
-    for elemento in arreglo1:
-        if elemento in arreglo2:
-            x += 1
-    if x == len(arreglo1):
-        return True
+    counts = {}
+    final = []
+    for numero in arreglo1:
+        counts[numero] = 1
+    for numero in arreglo2:
+        counts[numero] = counts.get(numero, 0) + 1
+    temp = counts.items()
+    for key, value in temp:
+        if value > 1:
+            final.append(key)
+    if final == arreglo1:
+        return [True]
     else:
-        return False
+        return [False]
 # 41. Salir: Permite al usuario salir de la aplicación.
 
 
@@ -135,7 +150,7 @@ def menuPrincipal(Resultado=None, mensaje="", mem=[]):
         arreglo1 = mem
         print("!---------------------------------------------------- Bienvenido a Los Conjuntos Como Arreglos ----------------------------------------------------!\nEl primer Arreglo es:", arreglo1)
         borradoCache = str(input(
-            "Si desea eliminar este valor por favor digite ':wq' y el programa olvidara este primer arreglo (En caso opuesto deje el campo vacio): "))
+            "Si desea eliminar este valor por favor digite ':wq' y el programa olvidara este primer arreglo (En caso opuesto deje el campo vacio, todo valor sera ignorado): "))
         if borradoCache == ":wq":
             return menuPrincipal(None)
     elif Resultado == None:

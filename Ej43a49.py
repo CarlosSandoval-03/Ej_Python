@@ -1,3 +1,4 @@
+from Ej30 import nuevoMeterNumeros
 # Un polinomio de grado n, como P(x) = anxn + an−1xn−1 + ⋯ + a1x1 + a0x0 se puede representar mediante un arreglo de reales de la siguiente manera: (a0,a1,...,an−1,an).
 
 # Usando esta representacion hacer un programa que le permita al usuario leer dos polinomios y escoger mediante un menu, una de las siguientes operaciones sobre dichos polinomios:
@@ -9,3 +10,15 @@
 # 48. Residuo: Calcula el polinomio residuo de la division del primero por el segundo y lo imprime.
 # 49. Salir: Permite salir de la aplicacion al usuario.
 # Despues de realizada la operacion el menu se debe presentar de nuevo hasta que el usuario desee salir.
+
+
+def meterPolinomios():
+    a = None
+
+
+def main():
+    print("Hola")
+
+
+if __name__ == "__main__":
+    main()
