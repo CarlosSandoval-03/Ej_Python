@@ -17,9 +17,16 @@ def reemplazar_matriz(matriz:list,entero:int) -> list:
 
 
 def main():
-    a = [[8,1,6],[3,5,7],[4,9,2]]
-    x = 5
-    print(reemplazar_matriz(a,x))
+    limpiarConsola()
+    # Matriz 1
+    n1 = int(input('Ingrese el valor de filas de la matriz: '))
+    m1 = int(input('Ingrese el valor de columnas de la matriz: '))
+    
+    a = leer_matriz_enteros(n1,m1)
+    x = int(input('Ingrese el entero a evaluar: '))
+
+    total = reemplazar_matriz(a,x)
+    print(f'La matriz resultante del valor {x} es: {total}')
 
 if __name__ == '__main__':
     main()
