@@ -23,7 +23,7 @@ def main():
 
     # Arreglo
     array = nuevoMeterNumeros()
-    print(matriz_espiral(array))
+    print(f'La matriz resultante es: {matriz_espiral(array)}')
 
 
 if __name__ == '__main__':
