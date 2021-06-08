@@ -34,12 +34,14 @@ def determinante_matriz_tres(matriz:list) -> float:
 
 
 def tamano_matriz(n:int, matriz:list) -> str:
-    if n == 2:
+    if n == 1:
+        total = matriz[0][0]
+    elif n == 2:
         total = determinante_matriz_dos(matriz)
     elif n == 3:
         total = determinante_matriz_tres(matriz)
     elif n >= 4:
-        total = determinante_matriz_diferente_orden(matriz)
+        total = determinante_matriz_diferente_orden(matriz,n)
     
     return f'El determinante de la matriz es: {total}'
 
@@ -47,17 +49,16 @@ def tamano_matriz(n:int, matriz:list) -> str:
 
 def main():
     limpiarConsola()
+    print(determinante_matriz_diferente_orden([[-2,4,5],[6,7,-3],[3,0,2]]))
     print(determinante_matriz_tres([[-2,4,5],[6,7,-3],[3,0,2]]))
+    print()
+    print(determinante_matriz_diferente_orden([[2,1,-1,2],[4,5,-3,6],[-2,5,-2,6],[4,11,-4,8]]))
+#    print(determinante_matriz_diferente_orden([[3,4,1,2],[-2,0,1,3],[2,0,4,-3],[4,5,1,0]],4))
     # Creacion de la matriz
-    n = int(input('Ingrese la cantidad de filas de la matriz: '))
-    m = int(input('Ingrese la cantidad de columnas de la matriz: '))
-    matriz = leer_matriz_enteros(n,m)
+    n = int(input('Ingrese el tamaño de la matriz: '))
+    matriz = leer_matriz_enteros(n,n)
     
-    # Comprobacion matriz cuadrada
-    if matriz_cuadrada(n,m):
-        print(tamano_matriz(n,matriz))
-    else:
-        print('La matriz debe ser cuadrada')
+    print(determinante_matriz_diferente_orden(matriz,n))
 
 if __name__ == '__main__':
     main()
