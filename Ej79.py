@@ -5,7 +5,6 @@ from metodosTemp import limpiarConsola
 
 
 def codificar_cadena(cadena:str, codificarlo:str) -> str:
-    #cadena = cadena.lower()
     alfabeto = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
     diccionario = {}
 
@@ -17,15 +16,18 @@ def codificar_cadena(cadena:str, codificarlo:str) -> str:
 
     temp = ''
     for k in range(len(cadena)):
-        if cadena[k] != ' ':
-            if cadena[k] == cadena[k].lower():
-                for x,y in diccionario.items():
-                    if cadena[k] == x:
-                        temp += y
+        if cadena[k] != 'ñ':
+            if cadena[k] != ' ':
+                if cadena[k] == cadena[k].lower():
+                    for x,y in diccionario.items():
+                        if cadena[k] == x:
+                            temp += y
+                else:
+                    temp += cadena[k]
             else:
-                temp += cadena[k]
+                temp += ' '
         else:
-            temp += ' '
+            temp += 'ñ'
     return temp
 
 
