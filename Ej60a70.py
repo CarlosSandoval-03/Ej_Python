@@ -56,9 +56,7 @@ def conversion_conjunto(matriz:list) -> list:
 
 # Simetria
 
-def simetria_binaria(matriz:list, relacion:list) -> bool:
-    lista = conversion_conjunto(matriz)
-    
+def simetria_binaria(relacion:list) -> bool: 
     for i in range(len(relacion)):
         temp = inversoArreglo(relacion[i])
         if not inSimple(temp,relacion):
@@ -139,25 +137,14 @@ def eleccion() -> int:
     return e
 
 
-def menu(matriz1:list, matriz2:list, relacionA:list, relacionB:list) -> str:
+def menu() -> str:
     flag = True
     while flag:
         x = eleccion()
-        if x == 1:
-            temp = union_binaria(matriz1, matriz2)
-            operacion = 'union binaria'
-        elif x == 2:
-            temp = interseccion_binaria(matriz1, matriz2)
-            operacion = 'interseccion binaria'
-        elif x >= 11: 
-            flag = False
-        return f'El resultado de la operacion {operacion} es: {temp}'
 
 
 def main():
     limpiarConsola()
-    print(transitividad_binaria([[0,1,2]], [[1,2],[2,1],[1,1],[2,2]]))
-    print(transitividad_binaria([[0,1,2]], [[0,1],[1,2],[0,0],[2,1]]))
     '''
     print('Matriz 1')
     print('Ingrese la relacion para crear las matrices booleanas\n')
