@@ -45,7 +45,6 @@ def interseccion_binaria(matriz1:list, matriz2:list) -> list:
                 temp[fila][columna] = 1
     return temp 
 
-
 # Conversion a conjunto
 
 def conversion_conjunto(matriz:list) -> list:
@@ -87,8 +86,27 @@ def reflexibilidad_binaria(matriz:list, relacion:list) -> bool:
 
 # Transitividad
 
-def transitividad_binaria(relacion:list) -> bool:
-    pass
+def transitividad_binaria(matriz:list, relacion:list) -> bool:
+    lista = conversion_conjunto(matriz)
+    
+    array = []
+    temp = []
+    pos = 0
+    for i in range(len(relacion)):
+        x,y = relacion[i]
+        if pos%2 == 0:
+            temp.append(x)
+        else:
+            temp.append(y)
+        if len(temp) == 2:
+            array.append(temp)
+            temp = []
+        pos += 1
+    
+    for i in range(len(array)):
+        if not inSimple(array[i], relacion):
+            return False
+    return True
 
 # Orden
 
@@ -138,13 +156,8 @@ def menu(matriz1:list, matriz2:list, relacionA:list, relacionB:list) -> str:
 
 def main():
     limpiarConsola()
-    print('union:',union_binaria([[1,0,1],[0,1,0]],[[0,1,0],[1,1,0]]))
-    print('interseccion:',interseccion_binaria([[1,0,1],[0,1,0]],[[0,1,0],[1,1,0]]))
-    print('reflexion:',reflexibilidad_binaria([[1,2,3]], [[1,1],[2,2],[3,3]]))
-    print('reflexion caso false:',reflexibilidad_binaria([[1,2,3]], [[1,2],[1,1],[2,3],[3,3]]))
-    print('simetria:',simetria_binaria([[1,2,3]], [[1,1],[2,3],[3,2],[2,2]]))
-    print('simetria caso false:', simetria_binaria([[1,2,3]], [[1,2],[2,1],[1,3]]))
-
+    print(transitividad_binaria([[0,1,2]], [[1,2],[2,1],[1,1],[2,2]]))
+    print(transitividad_binaria([[0,1,2]], [[0,1],[1,2],[0,0],[2,1]]))
     '''
     print('Matriz 1')
     print('Ingrese la relacion para crear las matrices booleanas\n')
