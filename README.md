@@ -7,13 +7,14 @@
 ---
 
 Falta Programacion:
-[ ] Ej14
-[ ] Ej15
-[ ] Ej47
-[ ] Ej48
-[X] Ej56
-[ ] Ej57
-[ ] Ej58
+
+- [ ] Ej14
+- [ ] Ej15
+- [ ] Ej47
+- [ ] Ej48
+- [x] Ej56
+- [ ] Ej57
+- [ ] Ej58
 
 ---
 
