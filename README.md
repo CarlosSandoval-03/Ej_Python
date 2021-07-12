@@ -11,7 +11,7 @@ Falta Programacion:
 - [ ] Ej47
 - [ ] Ej48
 - [x] Ej56
-- [ ] Ej57
+- [x] Ej57
 - [ ] Ej58
 
 ---
