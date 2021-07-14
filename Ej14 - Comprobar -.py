@@ -2,7 +2,7 @@ def ejCatorce(m1, m2, puntoCorte):
     operacion = m1 * m2
     if m1 == m2 and puntoCorte == []:
         return "Rectas paralelas"
-    elif operacion == -1 and puntoCorte != []:
+    elif operacion <= -1 and puntoCorte != []:
         return "Rectas perpendiculares"
     else:
         return "Las rectas no se reconoce como alguna de las anteriores"
