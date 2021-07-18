@@ -10,12 +10,9 @@ Falta Programacion:
 
 - [ ] Ej47
 - [ ] Ej48
-- [x] Ej56
-- [x] Ej57
-- [x] Ej58
 
 ---
 
 Falta Documentacion:
 
-- [ ] Desde Ej30
+- [ ] Desde Ej50
