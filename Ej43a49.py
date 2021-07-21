@@ -198,12 +198,88 @@ def eliminar_ceros(lista: list) -> list:
     return temp
 
 
-def divisionPolinomios(lista_polinomio1: list, lista_polinomio2: list) -> list:
-    pol1 = eliminar_ceros(inversoArreglo(lista_polinomio1.copy()))
-    pol2 = eliminar_ceros(inversoArreglo(lista_polinomio2.copy()))
+def divisionPolinomios(polinomio1: list, polinomio2: list) -> list:
+    dividir = []
+    expo = []
+    for i in range(len(polinomio1)):
+        for k in range(len(polinomio2)):
+            temp = polinomio1[i] / polinomio2[k]
+            if temp > 0:
+                dividir.append('+' + str(temp))
+                expo.append(i+k)
+            elif temp != 0:
+                expo.append(i+k)
+                dividir.append(str(temp))
+
+    counts = {}
+    for j in range(len(expo)):
+        counts[expo[j]] = counts.get(expo[j], 0) + 1
+
+    copiadividir = dividir.copy()
+    operar = []
+    listaTemporal = []
+    for k, v in counts.items():
+        if v > 1:
+            for i in range(v):
+                index = metodoIndex(expo, k)
+                operar.append(copiadividir[index])  # Debo retornar copia
+                copiadividir.pop(index)
+                listaTemporal.append(index)
+
+    sumaTemp = 0
+    for h in range(len(operar)):
+        sumaTemp += float(operar[h])
+        if sumaTemp > 0:
+            suma = '+' + str(sumaTemp)
+        else:
+            suma = str(sumaTemp)
+    copiadividir.insert(listaTemporal[0], suma)
+    return ubicarPolinomios(copiadividir, verificionNoRepeticion(expo))
+
+
+
 
 
 # 48. Residuo: Calcula el polinomio residuo de la division del primero por el segundo y lo imprime.
+
+def residuoPolinomios(polinomio1: list, polinomio2: list) -> list:
+    residuo = []
+    expo = []
+    for i in range(len(polinomio1)):
+        for k in range(len(polinomio2)):
+            temp = polinomio1[i] % polinomio2[k]
+            if temp > 0:
+                residuo.append('+' + str(temp))
+                expo.append(i+k)
+            elif temp != 0:
+                expo.append(i+k)
+                residuo.append(str(temp))
+
+    counts = {}
+    for j in range(len(expo)):
+        counts[expo[j]] = counts.get(expo[j], 0) + 1
+
+    copiaresiduo = residuo.copy()
+    operar = []
+    listaTemporal = []
+    for k, v in counts.items():
+        if v > 1:
+            for i in range(v):
+                index = metodoIndex(expo, k)
+                operar.append(copiaresiduo[index])  # Debo retornar copia
+                copiaresiduo.pop(index)
+                listaTemporal.append(index)
+
+    sumaTemp = 0
+    for h in range(len(operar)):
+        sumaTemp += float(operar[h])
+        if sumaTemp > 0:
+            suma = '+' + str(sumaTemp)
+        else:
+            suma = str(sumaTemp)
+    copiaresiduo.insert(listaTemporal[0], suma)
+    return ubicarPolinomios(copiaresiduo, verificionNoRepeticion(expo))
+
 # 49. Salir: Permite salir de la aplicacion al usuario.
 # Despues de realizada la operacion el menu se debe presentar de nuevo hasta que el usuario desee salir.
 # Test = 2x^3+5x-3 || 4x-3x^2+2x^3
@@ -269,7 +345,8 @@ def ciclo_menu(flag=True, impresion=False):
 
 
 def main():
-    ciclo_menu()
+    # ciclo_menu()
+    print(divisionPolinomios(polinomio('1x^5+2x^3-1x-8'),polinomio('1x^2-2x+1')))
 
 
 if __name__ == '__main__':
